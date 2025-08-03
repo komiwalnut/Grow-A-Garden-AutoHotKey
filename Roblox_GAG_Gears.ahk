@@ -95,8 +95,8 @@ StartScript() {
         if !ScrollAndClick("Down", 3, 20, 3)
             break
         
-        ; Scroll up 19 times
-        Loop 19 {
+        ; Scroll up 20 times
+        Loop 20 {
             if !running
                 break
             Click("WheelUp")
