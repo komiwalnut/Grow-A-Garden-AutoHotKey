@@ -75,9 +75,17 @@ StartScript() {
         if !SafeClickMultiple(3)
             break
         
-        ; Repeat scroll pattern 14 times
-        Loop 14 {
+        ; Repeat scroll pattern 8 times
+        Loop 8 {
             if !ScrollAndClick("Down", -3, 10, 3)
+                break
+        }
+        if !running
+            break
+
+	    ; Repeat scroll pattern 7 times
+        Loop 7 {
+            if !ScrollAndClick("Down", -3, 8, 3)
                 break
         }
         if !running

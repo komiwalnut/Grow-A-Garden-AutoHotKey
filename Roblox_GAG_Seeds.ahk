@@ -83,7 +83,7 @@ StartScript() {
         if !running
             break
 
-	; Repeat scroll pattern 11 times
+	    ; Repeat scroll pattern 11 times
         Loop 11 {
             if !ScrollAndClick("Down", -3, 8, 3)
                 break
