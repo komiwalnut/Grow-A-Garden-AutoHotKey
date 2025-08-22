@@ -37,42 +37,42 @@ ActionSequence() {
     
     ; Loop 2 times
     Loop 2 {
-        ; 1. Click and hold left click for 0.7 seconds then wait 0.5 seconds
-        Click "Down"
-        Sleep(700)
-        Click "Up"
-        Sleep(500)
+        ; 1. Click and hold left click for 0.25 seconds then wait 1 second
+        Click("Down")
+        Sleep(250)
+        Click("Up")
+        Sleep(1000)
         if !running
             return false
     }
     
-    ; 2. Press W for 2 seconds then wait 0.5 seconds
+    ; 2. Press W for 0.5 seconds then wait 1 second
     Send("{w Down}")
-    Sleep(2000)
-    Send("{w Up}")
     Sleep(500)
-    if !running
-        return false
-    
-    ; 3. Left click once and wait 1 second
-    Click()
+    Send("{w Up}")
     Sleep(1000)
     if !running
         return false
     
-    ; 4. Left click and hold for 3 seconds then wait for 2 seconds
-    Click "Down"
-    Sleep(3000)
-    Click "Up"
+    ; 3. Left click once and wait 0.8 seconds
+    Click()
+    Sleep(800)
+    if !running
+        return false
+    
+    ; 4. Left click and hold for 5 seconds then wait for 2 seconds
+    Click("Down")
+    Sleep(5000)
+    Click("Up")
     Sleep(2000)
     if !running
         return false
     
-    ; 5. Press S for 2 seconds then wait 0.5 seconds
+    ; 5. Press S for 0.5 seconds then wait 0.8 seconds
     Send("{s Down}")
-    Sleep(2000)
-    Send("{s Up}")
     Sleep(500)
+    Send("{s Up}")
+    Sleep(800)
     
     return running
 }
