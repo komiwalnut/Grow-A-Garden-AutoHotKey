@@ -45,11 +45,10 @@ All scripts use the same control scheme:
 
 1. Open the desired Roblox game
 2. Set the game to fullscreen mode
-3. Navigate to the appropriate area for the automation
-4. Run the desired AutoHotkey script from its respective folder
-5. Press **F1** to begin automation
-6. Press **F2** to stop at any time
-7. Press **ESC** to close the script entirely
+3. Run the desired AutoHotkey script from its respective folder
+4. Press **F1** to begin automation
+5. Press **F2** to stop at any time
+6. Press **ESC** to close the script entirely
 
 ### Grow a Garden - Seeds Included
 
