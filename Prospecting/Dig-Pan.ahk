@@ -35,22 +35,22 @@ ActionSequence() {
     if !running
         return false
     
-    ; Loop 2 times
+    ; Loop 2 times no meteor, Loop 1 time with meteor
     Loop 2 {
-        ; 1. Click and hold left click for 0.25 seconds then wait 1 second
+        ; 1. Click and hold left click for 0.26 seconds then wait 0.7 second
         Click("Down")
-        Sleep(250)
+        Sleep(260)
         Click("Up")
-        Sleep(1000)
+        Sleep(700)
         if !running
             return false
     }
     
-    ; 2. Press W for 0.5 seconds then wait 1 second
+    ; 2. Press W for 0.5 seconds then wait 0.5 second
     Send("{w Down}")
     Sleep(500)
     Send("{w Up}")
-    Sleep(1000)
+    Sleep(500)
     if !running
         return false
     
@@ -60,19 +60,20 @@ ActionSequence() {
     if !running
         return false
     
-    ; 4. Left click and hold for 5 seconds then wait for 2 seconds
+    ; 4 seconds no meteor, 3 seconds with meteor
+    ; 4. Left click and hold for 3/4 seconds then wait for 1.3 seconds
     Click("Down")
-    Sleep(5000)
+    Sleep(4000)
     Click("Up")
-    Sleep(2000)
+    Sleep(1300)
     if !running
         return false
     
-    ; 5. Press S for 0.5 seconds then wait 0.8 seconds
+    ; 5. Press S for 0.5 seconds then wait 0.5 seconds
     Send("{s Down}")
     Sleep(500)
     Send("{s Up}")
-    Sleep(800)
+    Sleep(500)
     
     return running
 }
