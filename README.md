@@ -13,8 +13,8 @@ Automation scripts for digging and panning actions in the Roblox game "Prospecti
 ## Files Included
 
 ### Grow a Garden Scripts (`/Grow_A_Garden/`)
-- **Grow_Garden_Gears.ahk** - Automation script for buying all gears
-- **Grow_Garden_Seeds.ahk** - Automation script for buying all seeds
+- **Grow_Garden_Gears.ahk** - Automation script for buying all gears using 5-second click holds
+- **Grow_Garden_Seeds.ahk** - Automation script for buying all seeds using 5-second click holds
 
 ### Prospecting Scripts (`/Prospecting/`)
 - **Dig-Pan.ahk** - Automation script for digging and panning actions
@@ -56,13 +56,19 @@ All scripts use the same control scheme:
 
 ### Grow a Garden - Gears Included
 
-- Watering Can, Trading Ticket, Trowel, Recall Wrench, Basic Sprinkler, Advanced Sprinkler, Medium Toy, Medium Treat, Godly Sprinkler, Magnifying Glass, Master Sprinkler, Cleaning Spray, Favorite Tool, Harvest Tool, Friendship Pot, Grandmaster Sprinkler, Levelup Lollipop
+- Watering Can, Trading Ticket, Trowel, Recall Wrench, Basic Sprinkler, Advanced Sprinkler, Medium Toy, Medium Treat, Godly Sprinkler, Magnifying Glass, Master Sprinkler, Cleaning Spray, Cleaning Pet Shard, Favorite Tool, Harvest Tool, Friendship Pot, Grandmaster Sprinkler, Levelup Lollipop
 
 ### Prospecting - Actions
 
 - Automated digging and panning cycles
 - Optimized timing for maximum efficiency
 - Safe movement and click patterns
+
+### Grow a Garden - Automation Details
+
+- **Click and Hold Pattern**: Scripts use 5-second left-click holds instead of rapid clicking
+- **Scroll Navigation**: Automated scrolling through item lists with precise positioning
+- **Safety Checks**: All actions include running state validation for clean interruption
 
 **⚠️ Important Note for Dig-Pan.ahk**: Since player stats and game mechanics are dynamic and vary between players, you may need to adjust the timing delays in the Dig-Pan.ahk script to match your specific character's stats and preferences. The current timings are set as defaults but may not be optimal for all players.
 

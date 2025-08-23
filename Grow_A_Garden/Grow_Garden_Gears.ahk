@@ -17,6 +17,17 @@ SafeMove(offsetX, offsetY) {
     return running
 }
 
+; Helper function to hold left click for specified duration
+SafeClickHold(duration := 5000) {
+    global running
+    if !running
+        return false
+    Click("Down")
+    Sleep(duration)
+    Click("Up")
+    return running
+}
+
 ; Helper function to click multiple times with checks
 SafeClickMultiple(times, delay := 300) {
     global running
@@ -30,7 +41,7 @@ SafeClickMultiple(times, delay := 300) {
 }
 
 ; Helper function for scroll and click pattern
-ScrollAndClick(direction, moveX := 0, moveY := 0, clickCount := 1) {
+ScrollAndClick(direction, moveX := 0, moveY := 0, holdDuration := 5000) {
     global running
     if !running
         return false
@@ -53,7 +64,7 @@ ScrollAndClick(direction, moveX := 0, moveY := 0, clickCount := 1) {
             return false
     }
     
-    return SafeClickMultiple(clickCount)
+    return SafeClickHold(holdDuration)
 }
 
 StartScript() {
@@ -66,33 +77,33 @@ StartScript() {
         if !SafeMove(3, 0) || !running
             break
         Click()
-        Sleep(1000)
+        Sleep(500)
         
-        ; Second position and click 3 times
+        ; Second position and hold click for 5 seconds
         MouseMove(830, 665, 0)
         if !SafeMove(-3, 0) || !running
             break
-        if !SafeClickMultiple(3)
+        if !SafeClickHold(5000)
             break
         
         ; Repeat scroll pattern 8 times
         Loop 8 {
-            if !ScrollAndClick("Down", -3, 10, 3)
+            if !ScrollAndClick("Down", -3, 10, 5000)
                 break
         }
         if !running
             break
 
-	    ; Repeat scroll pattern 7 times
-        Loop 7 {
-            if !ScrollAndClick("Down", -3, 8, 3)
+	    ; Repeat scroll pattern 8 times
+        Loop 8 {
+            if !ScrollAndClick("Down", -3, 8, 5000)
                 break
         }
         if !running
             break
         
         ; Final scroll down pattern
-        if !ScrollAndClick("Down", 3, 20, 3)
+        if !ScrollAndClick("Down", 3, 20, 5000)
             break
         
         ; Scroll up 20 times
